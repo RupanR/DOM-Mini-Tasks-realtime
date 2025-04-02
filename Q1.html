@@ -34,6 +34,14 @@
       Color a span/div element content when a user moves the mouse over the
       element.
     </h1>
-  
+   <div id="color">
+    <h4>Change my color</h4>
+   </div>
+
+   <script>
+    const color = document.getElementById("color")
+    color.addEventListener("mouseover",()=>(color.style.backgroundColor="red"))
+    color.addEventListener("mouseleave",()=>(color.style.backgroundColor="black"))
+   </script>
   </body>
 </html>

@@ -13,12 +13,12 @@
         color: aqua;
         border: 1px solid red;
       }
-   
+
       body {
         background-color: black;
         color: aqua;
       }
-      h1{
+      h1 {
         text-align: center;
       }
     </style>
@@ -27,6 +27,17 @@
     <h1>
       Use prompt to read a value from user and display it in the span element.
     </h1>
-   
+    <script>
+      const button = document.createElement("button");
+      const span = document.createElement("span");
+      button.setAttribute("type", "button");
+      button.innerText = "Click Me !";
+      document.body.append(button, span);
+      button.addEventListener("click", () => {
+        const element = prompt("Enter Your Name");
+        // console.log(element);
+        span.innerHTML = `Your Name is <b>${element}</b>`;
+      });
+    </script>
   </body>
 </html>
